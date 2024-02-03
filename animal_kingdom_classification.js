@@ -97,7 +97,7 @@ class Mammals extends Animal {
   }
 }
 
-// Example usage
+
 const spider = new Arthropoda("Spider");
 const salmon = new Fish("Salmon");
 const frog = new Amphibia("Frog");
