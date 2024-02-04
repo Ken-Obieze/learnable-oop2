@@ -87,13 +87,19 @@ The Animal Kingdom is further divided into specific classes:
 ## Example Usage
 
 ```javascript
-const spider = new Arthropoda("Spider");
-const salmon = new Fish("Salmon");
-const frog = new Amphibia("Frog");
-const turtle = new Reptiles("Turtle");
-const eagle = new AVES("Eagle");
-const lion = new Mammals("Lion");
+const spider = new Arthropoda("Spider",false, "Cold-Blooded", 8);
+const salmon = new Fish("Salmon", true, "Cold-Blooded", "saltwater");
+const frog = new Amphibia("Frog", true, "Cold-Blooded");
+const turtle = new Reptiles("Turtle", true, "Cold-Blooded", false);
+const eagle = new AVES("Eagle", true, "Warm-Blooded");
+const lion = new Mammals("Lion", true, "Warm-Blooded");
 
+spider.eat(); // Output: Spider is eating.
+spider.crawl(); // Output: Spider is crawling with its 8 legs.
+salmon.eat(); // Output: Salmon is eating.
+salmon.swim(); // Output: Salmon is swimming in saltwater water.
+turtle.eat(); // Output: Turtle is eating.
+turtle.sunBath(); // Output: Turtle is sunbathing.
 console.log(spider.makeSound()); // Output: Scuttling and clicking sounds
 console.log(eagle.getBackbone()); // Output: true
 console.log(lion.getBloodType()); // Output: Warm-Blooded
